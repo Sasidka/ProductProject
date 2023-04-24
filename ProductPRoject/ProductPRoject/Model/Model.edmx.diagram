@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ad827b560c274e8994ae572bf5c40bac" Name="Diagram1">
+        <EntityTypeShape EntityType="TestDbModel.Accommodation" Width="1.5" PointX="3.75" PointY="8.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.CustomItems" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.Fittings" Width="1.5" PointX="6" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.HardwareWarehouse" Width="1.5" PointX="6" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.Order" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.Product" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.ProductFabric" Width="1.5" PointX="3" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.ProductWarehouse" Width="1.5" PointX="3" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.Role" Width="1.5" PointX="1.5" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.Textile" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TestDbModel.User" Width="1.5" PointX="1.5" PointY="13.25" IsExpanded="true" />
+        <AssociationConnector Association="TestDbModel.FK_Fittings_Accommodation" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDbModel.FK_HardwareWarehouse_Accommodation" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDbModel.FK_CustomItems_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDbModel.FK_CustomItems_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDbModel.FK_Fittings_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDbModel.FK_Order_User" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDbModel.FK_ProductFabric_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDbModel.FK_ProductFabric_Textile" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDbModel.FK_ProductWarehouse_Textile" ManuallyRouted="false" />
+        <AssociationConnector Association="TestDbModel.FK_User_Role" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

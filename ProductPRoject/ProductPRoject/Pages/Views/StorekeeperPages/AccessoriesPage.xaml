@@ -1,0 +1,104 @@
+﻿<Page x:Class="ProductPRoject.Pages.Views.StorekeeperPages.AccessoriesPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProductPRoject.Pages.Views.StorekeeperPages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" 
+      Loaded="Page_Loaded"
+      d:DesignWidth="800"
+      Title="AccessoriesPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+
+
+        <StackPanel HorizontalAlignment="Left"
+                    VerticalAlignment="Center">
+            <Button x:Name="BackBtn"
+                    Height="25"
+                    Width="100"
+                    Content="Выйти"
+                    Margin="10 0 0 0"
+                    Click="BackBtn_Click"/>
+        </StackPanel>
+
+        <StackPanel Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Поиск:"
+                       Width="40"/>
+            <TextBox x:Name="SearchTxb"
+                     Width="200"
+                     Height="20"
+                     TextChanged="SearchTxb_TextChanged"/>
+        </StackPanel>
+
+        <StackPanel HorizontalAlignment="Right"
+                    VerticalAlignment="Center">
+            <ComboBox x:Name="FiltrCmb"
+                      Width="120"
+                      DisplayMemberPath="Name"
+                      Margin="0 0 10 0"
+                      SelectionChanged="FiltrCmb_SelectionChanged"/>
+        </StackPanel>
+
+
+
+        <ListView x:Name="AccomodationLV"
+                  Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0"
+                                    VerticalAlignment="Center">
+                            <Image Source="{Binding Image}"
+                                   Width="150"
+                                   Height="150"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1"
+                                    VerticalAlignment="Center">
+                            <Label Content="{Binding Name}" ContentStringFormat="Фурнитура: {0}" />
+                            <Label Content="{Binding Type}" ContentStringFormat="Тип: {0}" />
+                            <Label Content="{Binding Width}" ContentStringFormat="Ширина: {0}" />
+                            <Label Content="{Binding Lenght}" ContentStringFormat="Длина: {0}"/>
+                            <Label Content="{Binding Weight}" ContentStringFormat="Вес: {0}"/>
+                            <Label Content="{Binding Price}" ContentStringFormat="Цена: {0}"/>
+                        </StackPanel>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Left" Margin="195,0,0,0">
+            <Button x:Name="DeleteBtn"
+                    Width="130"
+                    Height="30"
+                    Content="Удалить"
+                    Click="DeleteBtn_Click"/>
+            <Button x:Name="AddBtn"
+                    Width="130"
+                    Height="30"
+                    Margin="10 0"
+                    Content="Добавить"
+                    Click="AddBtn_Click"/>
+            <Button x:Name="EditBtn"
+                    Width="130"
+                    Height="30"
+                    Content="Редактировать"
+                    Click="EditBtn_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>
